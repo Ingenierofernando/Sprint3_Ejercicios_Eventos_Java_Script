@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./eventos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Calculadora de IMC</title>
+
+</head>
+
+<body>
+
+
+  
+
+<!--Indice de masa corporal-->
+
+   <div class="d-flex pt-5">
+
+    <div class="container col-4 bg-body-secondary">
+      <h2 class="text-center">Calculadora de Índice de Masa Corporal (IMC)</h2>
+      <div class="mb-3">
+        <label for="altura" class="form-label">Altura (cm):</label>
+        <input type="number" id="altura" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="peso" class="form-label">Peso (kg):</label>
+        <input type="number" id="peso" class="form-control">
+      </div>
+      <button type="button" class="btn btn-primary" id="imc">Calcular IMC</button>
+      <div class="mb-3 pt-3">
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" class="form-control" readonly>
+      </div>
+
+    </div>
+
+    <!--Conversor de divisas-->
+
+     <div class="container col-4 bg-body-secondary">
+
+      <h2 class="text-center">Conversor de Divisas</h2>
+
+      <div class="container mt-5">
+        <label for="dolar">Dólares:</label>
+        <input type="number" id="dolar" value="1" class="form-control" placeholder="dolar estadunidense"
+          oninput="convertir('dolares')">
+      </div>
+
+      <div class="container mt-5">
+        <label for="pesos">Pesos:</label>
+        <input type="number" id="pesos" class="form-control" placeholder="Peso Colombiano" value="4067.81" oninput="convertir('pesos')">
+      </div>
+    </div>
+
+  </div> 
+
+
+  
+
+<!-- Aplicación de notas -->
+
+<div class="container container-fluid mt-5 mb-5   bg-body-secondary div-container">
+  <header>
+      <h1>
+          Nueva nota
+      </h1>
+  </header>
+
+  
+
+  <div class="d-flex">
+      <section class="container">
+          <label for="titulo"></label>
+          <input type="text" name="titulo" id="titulo" value="" placeholder="Título" class="form-control">
+
+          <textarea type="text" name="texto" id="texto" value="" placeholder="Escriba su nota aquí!" rows="4"
+              class="form-control mt-3 mb-3"></textarea>
+      </section>
+
+      <section class="container d-flex flex-column justify-content-center">
+          <button type="button" class="btn btn-primary" onclick="agregarNotaYActualizar()">Guardar</button>
+          <button type="button" class="btn btn-danger mt-3" onclick="limpiarCampos()">Borrar</button>
+      </section>
+  </div>
+
+
+  <div class="container container-fluid p-3">
+    
+    <label for="filtroTexto"></label>
+    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="filtroTexto" oninput="aplicarFiltros()">
+    
+    
+    <div class="form-check form-switch pt-3">
+    <label class="form-check-label" for="filtroRealizadas">Mostrar solo Realizadas:</label>
+    <input class="form-check-input" role="switch" type="checkbox" id="filtroRealizadas" onchange="aplicarFiltros()">
+  </div>
+</div>
+
+  <div id="contenedor-notas" class="container pt-5 pb-3">
+      <!-- Aquí se pintan las tarjetas de las notas -->
+  </div>
+</div>
+
+  
+
+
+
+
+
+
+
+<!--script conector a javascript-->
+  <script src="./eventos.js"></script>
+
+<!--CDN de bootstrap y js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

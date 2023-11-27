@@ -1,0 +1,43 @@
+.div-img{
+    width: 100% !important;
+    display: flex !important;
+    justify-items: center   !important;
+    align-items: center !important;   
+    margin: 5px !important;
+    
+}
+
+.div-img > img{
+    width: 100% !important;
+    height: 250px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contenedor-notas {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around   !important;
+    align-items: center !important;   
+}
+
+
+
+.div-card{
+    width: 20%;
+height: 200px !important;
+    display: flex !important;
+    justify-content: space-around   !important;
+    align-items: center !important;   
+    flex-wrap: wrap;
+    
+}
+
+.div-navbar{
+    display: flex !important;
+    justify-content:space-around   !important;
+    align-items: center !important;  
+}
+
+
